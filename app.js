@@ -8,12 +8,12 @@ function adicionarAmigo() {
     }
 }
 function sortearAmigo() {
-    if(listaDeNome.length == 0){
-        alert('Lista está vazia!');
+    if(listaDeNome.length == 0){;
         return null;
+    }else {       
+        let nomeAleatorio = Math.floor(Math.random()* listaDeNome.length);
+        let amigoSorteado = listaDeNome[nomeAleatorio];
+        let resultado = document.querySelector('h2');
+        resultado.innerHTML = `Nome Sorteado é ${amigoSorteado}`;
     }
-    let nomeAleatorio = Math.floor(Math.random()* listaDeNome.length);
-    let amigoSorteado = listaDeNome[nomeAleatorio];
-    console.log(amigoSorteado);
-    return amigoSorteado;
-} 
+}
