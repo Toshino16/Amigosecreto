@@ -8,7 +8,12 @@ function adicionarAmigo() {
     }
 }
 function sortearAmigo() {
+    if(listaDeNome.length == 0){
+        alert('Lista está vazia!');
+        return null;
+    }
     let nomeAleatorio = Math.floor(Math.random()* listaDeNome.length);
-    return listaDeNome[nomeAleatorio];
+    let amigoSorteado = listaDeNome[nomeAleatorio];
+    console.log(amigoSorteado);
+    return amigoSorteado;
 } 
-console.log(listaDeNome);
